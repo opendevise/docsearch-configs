@@ -1,0 +1,81 @@
+{
+  "index_name": "couchbase_docs",
+  "start_urls": [
+    {
+      "url": "https://docs.couchbase.com/server/(?P<version>.*?)/",
+      "variables": {
+        "version": ["4.0", "4.1", "4.5", "4.6", "5.0", "5.1", "5.5"]
+      },
+      "tags": ["server"]
+    },
+    {
+      "url": "https://docs.couchbase.com/c-sdk/(?P<version>.*?)/",
+      "variables": {
+        "version": ["2.5", "2.6", "2.7", "2.8"]
+      },
+      "tags": ["c-sdk"]
+    },
+    {
+      "url": "https://docs.couchbase.com/dotnet-sdk/(?P<version>.*?)/",
+      "variables": {
+        "version": ["2.1", "2.2", "2.3", "2.4", "2.5"]
+      },
+      "tags": ["dotnet-sdk"]
+    },
+    {
+      "url": "https://docs.couchbase.com/go-sdk/(?P<version>.*?)/",
+      "variables": {
+        "version": ["1.0", "1.1", "1.2"]
+      },
+      "tags": ["go-sdk"]
+    },
+    {
+      "url": "https://docs.couchbase.com/java-sdk/(?P<version>.*?)/",
+      "variables": {
+        "version": ["2.1", "2.2", "2.3", "2.4", "2.5"]
+      },
+      "tags": ["java-sdk"]
+    },
+    {
+      "url": "https://docs.couchbase.com/nodejs-sdk/(?P<version>.*?)/",
+      "variables": {
+        "version": ["2.1", "2.2", "2.3", "2.4"]
+      },
+      "tags": ["nodejs-sdk"]
+    },
+    {
+      "url": "https://docs.couchbase.com/php-sdk/(?P<version>.*?)/",
+      "variables": {
+        "version": ["2.1", "2.2", "2.3", "2.4"]
+      },
+      "tags": ["php-sdk"]
+    },
+    {
+      "url": "https://docs.couchbase.com/python-sdk/(?P<version>.*?)/",
+      "variables": {
+        "version": ["2.0", "2.1", "2.2"]
+      },
+      "tags": ["python-sdk"]
+    },
+    {
+      "url": "https://docs.couchbase.com/operator/(?P<version>.*?)/",
+      "variables": {
+        "version": ["0.8", "0.9"]
+      },
+      "tags": ["operator"]
+    }
+  ],
+  "sitemap_urls": [
+    "https://docs.couchbase.com/sitemap.xml"
+  ],
+  "stop_urls": [
+    "/(?:c|dotnet|go|nodejs|php|python)-sdk/[^/]+/common/"
+  ],
+  "selectors": {
+    "lvl0": ".navbar .component",
+    "lvl1": ".doc > h1.page",
+    "lvl2": ".doc .sect1 > h2[id]",
+    "lvl3": ".doc .sect2 > h3[id]",
+    "text": ".doc p"
+  }
+}
